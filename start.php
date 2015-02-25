@@ -1,20 +1,28 @@
 <?php
 /**
- * Aalborg theme plugin
+ * Spot Theme Start.php
  *
- * @package AalborgTheme
+ * @package SpotTheme
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
+ * @author Jeff Tilson
+ * @copyright THINK Global School 2010 - 2015
+ * @link http://www.thinkglobalschool.org
  */
+elgg_register_event_handler('init','system','spot_theme_init');
 
-elgg_register_event_handler('init','system','aalborg_theme_init');
+function spot_theme_init() {
+	// Extend pagesetup
+	elgg_register_event_handler('pagesetup', 'system', 'spot_theme_page_setup', 1000);
 
-function aalborg_theme_init() {
+	// Register Theme CSS
+	elgg_extend_view('css/elgg', 'spottheme/css');
 
-	elgg_register_event_handler('pagesetup', 'system', 'aalborg_theme_pagesetup', 1000);
+	// Register jquery ui CSS
+	$ui_url = elgg_get_site_url() . 'mod/spottheme/vendors/smoothness/jquery-ui-1.10.4.custom.css';
+	elgg_register_css('jquery.ui.smoothness', $ui_url);
+	elgg_load_css('jquery.ui.smoothness');
 
-	// theme specific CSS
-	elgg_extend_view('css/elgg', 'aalborg_theme/css');
-
-	elgg_register_plugin_hook_handler('head', 'page', 'aalborg_theme_setup_head');
+	elgg_register_plugin_hook_handler('head', 'page', 'spot_theme_setup_head');
 
 	// non-members do not get visible links to RSS feeds
 	if (!elgg_is_logged_in()) {
@@ -26,7 +34,7 @@ function aalborg_theme_init() {
 /**
  * Rearrange menu items
  */
-function aalborg_theme_pagesetup() {
+function spot_theme_page_setup() {
 
 	elgg_unextend_view('page/elements/header', 'search/header');
 	elgg_extend_view('page/elements/sidebar', 'search/header', 0);
@@ -101,7 +109,7 @@ function aalborg_theme_pagesetup() {
  * @param array  $data Array of items for head
  * @return array
  */
-function aalborg_theme_setup_head($hook, $type, $data) {
+function spot_theme_setup_head($hook, $type, $data) {
 	$data['metas'][] = array(
 		'name' => 'viewport',
 		'content' => 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0',
@@ -120,7 +128,7 @@ function aalborg_theme_setup_head($hook, $type, $data) {
 
 	$data['links'][] = array(
 		'rel' => 'apple-touch-icon',
-		'href' => elgg_normalize_url('mod/aalborg_theme/graphics/homescreen.png'),
+		'href' => elgg_normalize_url('mod/spottheme/graphics/homescreen.png'),
 	);
 
 	return $data;

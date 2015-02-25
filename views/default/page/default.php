@@ -1,10 +1,12 @@
 <?php
 /**
- * Elgg pageshell
- * The standard HTML page shell that everything else fits into
+ * Spot Theme Default Pageshell
  *
- * @package Elgg
- * @subpackage Core
+ * @package SpotTheme
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
+ * @author Jeff Tilson
+ * @copyright THINK Global School 2010 - 2015
+ * @link http://www.thinkglobalschool.org
  *
  * @uses $vars['head']        Parameters for the <head> element
  * @uses $vars['body_attrs']  Attributes of the <body> tag

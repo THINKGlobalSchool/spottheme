@@ -1,11 +1,14 @@
 <?php
 /**
- * Elgg icons
+ * Spot Theme Elgg icons CSS
  *
- * @package Elgg.Core
- * @subpackage UI
+ * @package SpotTheme
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
+ * @author Jeff Tilson
+ * @copyright THINK Global School 2010 - 2015
+ * @link http://www.thinkglobalschool.org
+ *
  */
-
 ?>
 /* <style> /**/
 
@@ -110,13 +113,13 @@
 .elgg-icon-hover-menu-hover,
 .elgg-icon-hover-menu:hover,
 :focus > .elgg-icon-hover-menu {
-	background: transparent url(<?php echo elgg_get_site_url();?>mod/aalborg_theme/graphics/avatar_menu_arrows.png) no-repeat;
+	background: transparent url(<?php echo elgg_get_site_url();?>mod/spottheme/graphics/avatar_menu_arrows.png) no-repeat;
 	background-position: right bottom;
 	width: 100%;
 	height: 100%;
 }
 .elgg-icon-hover-menu {
-	background: transparent url(<?php echo elgg_get_site_url();?>mod/aalborg_theme/graphics/avatar_menu_arrows.png) no-repeat;
+	background: transparent url(<?php echo elgg_get_site_url();?>mod/spottheme/graphics/avatar_menu_arrows.png) no-repeat;
 	background-position: right bottom;
 	width: 100%;
 	height: 100%;

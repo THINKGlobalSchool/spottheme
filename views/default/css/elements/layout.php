@@ -1,13 +1,17 @@
 <?php
 /**
- * Page Layout
+ * Spot Theme Page Layout CSS
+ *
+ * @package SpotTheme
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
+ * @author Jeff Tilson
+ * @copyright THINK Global School 2010 - 2015
+ * @link http://www.thinkglobalschool.org
  *
  * Contains CSS for the page shell and page layout
  *
  * Default layout: 990px wide, centered. Used in default page shell
  *
- * @package Elgg.Core
- * @subpackage UI
  */
 ?>
 /* <style> /**/
