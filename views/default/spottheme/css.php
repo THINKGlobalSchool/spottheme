@@ -28,6 +28,15 @@
 .elgg-module .elgg-list {
 	margin-top: 0;
 }
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
 /* ***************************************
 	TOPBAR MENU DROPDOWN
 *****************************************/
