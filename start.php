@@ -36,9 +36,6 @@ function spot_theme_init() {
  */
 function spot_theme_page_setup() {
 
-	elgg_unextend_view('page/elements/header', 'search/header');
-	elgg_extend_view('page/elements/sidebar', 'search/header', 0);
-
 	if (elgg_is_logged_in()) {
 
 		elgg_register_menu_item('topbar', array(
